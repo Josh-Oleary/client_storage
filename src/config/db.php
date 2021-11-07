@@ -1,6 +1,6 @@
 <?php
   class db{
-    private $dbhost = '127.0.0.1';
+    private $dbhost = 'localhost';
     private $dbuser = 'root';
     private $dbpass = 'root';
     private $dbname = 'slimapi';
