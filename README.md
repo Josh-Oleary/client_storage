@@ -24,3 +24,7 @@ public/clients/{id}
  
  public/home.twig
   - this endpoint will render a basic UI for adding clients to db
+
+# Testing
+ To run phpunit testsuite type the following command into the cl in root directory
+ ` vendor/bin/phpunit tests `
