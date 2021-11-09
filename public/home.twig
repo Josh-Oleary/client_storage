@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SlimAPI</title>
+</head>
+<body>
+  <h1>{{name}}</h1>
+  <form method='POST' action='/slimAPI/public/clients/add' style={{display: 'flex', flex-direction: 'column'}}>
+    <div>
+      <label for="first_name">First Name</label>
+      <input type="text" name='first_name' id='first_name'>
+    </div>
+    <div>
+      <label for="last_name">Last Name</label>
+      <input type="text" name='last_name' id='last_name'>
+    </div>
+    <div>
+      <label for="email_addr">Email Address</label>
+      <input type="email" name='email_addr' id='email_addr' multiple>
+    </div>
+    <button>Submit</button>
+  </form>
+  <form method='GET' action="/slimAPI/public/clients/">
+    <label for="id_query">ID Query:</label>
+    <input type="number" name="id_query" id='id_query'>
+    <button>Submit</button>
+  </form>
+</body>
+</html>
