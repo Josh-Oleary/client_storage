@@ -7,7 +7,7 @@ class RoutesTest extends \PHPUnit\Framework\TestCase
 {
     protected $client;
 
-    protected function setUp(): void {
+    protected static function setUp(): void {
         $this->client = new GuzzleHttp\Client([
             'base_uri' => 'http://localhost/'
         ]);
@@ -35,14 +35,14 @@ class RoutesTest extends \PHPUnit\Framework\TestCase
 
     }
 
-    public function testGet_ClientById(): object {
+    public static function testGet_ClientById(): object {
         $response = $this->client->get('slimAPI/public/clients/1');
 
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertIsObject($response);
 
         $data = json_decode($response->getBody(), true);
-        
+
         $this->assertNotEmpty($data, $message = 'Invalid User');
 
         return $response;
