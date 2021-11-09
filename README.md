@@ -1,14 +1,14 @@
 # client_storage
 API built with slimPHP and MariaDB
 
-#Run Application
+# Run Application
 Download zip file and run `composer install` in the command line. I used MAMP for this project, you can use something similar or start up an apache server on port 80
 Database server should be set to port 3306
 
 You can use Postman for quick testing of routes
 
 
-#Routes
+# Routes
 
 public/clients
   - this endpoint will return all clients in the db
