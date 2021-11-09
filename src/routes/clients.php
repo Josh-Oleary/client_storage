@@ -6,7 +6,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 $app = new \Slim\App;
 
 
-$app->get('/clients', function (Request $request, Response $response) {
+$app->get('/clients', function (Request $request, Response $response ) {
   $sql = "SELECT * FROM clients";
 
   try{
@@ -30,7 +30,7 @@ $app->post('/clients/add', function(Request $request, Response $response ) {
     $first_name = $request->getParam('first_name');
     $last_name = $request->getParam('last_name');
     $email_addr = $request->getParam('email_addr');
-    $email_arr = explode(",", $email_addr);
+    $email_arr = explode(",", $email_addr );
 
     $sql = "INSERT INTO `clients` (first_name, last_name) VALUES (:first_name, :last_name);";
 
