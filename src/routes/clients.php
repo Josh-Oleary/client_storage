@@ -15,7 +15,9 @@ $app->get('/clients', function (Request $request, Response $response ) {
 
     $stmt = $db->query( $sql );
     $clients = $stmt->fetchAll(PDO::FETCH_OBJ);
+
     $db = null;
+
     if($clients == []){
         echo 'No clients in db';
     } else {
@@ -79,7 +81,9 @@ $app->get('/clients/{id}', function(Request $request, Response $response ) {
     $db = $db->connect();
 
     $stmt = $db->query( $sql );
+    
     $client = $stmt->fetchAll(PDO::FETCH_OBJ);
+
     $db = null;
     echo json_encode( $client );
   } catch(PDOException $e) {
